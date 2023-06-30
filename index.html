@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WaveMasters - Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-left">
+        <img src="images/logo.png" alt="WaveMasters Logo">
+      </div>
+      <nav class="footer-right">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+
+  <!-- Home Content -->
+  <div id="content">
+    <div class="slide-image" style="background-image: url('images/slider1.jpg');"></div>
+    <div class="slide-content">
+      <h1>Welcome to <b>WaveMasters</b></h1>
+      <p class="subtitle">An Unforgettable Summer Experience</p>
+      <a href="#event-details" id="details-button">Details</a>
+    </div>
+  </div>
+
+
+
+
+  <!-- Event Details Section -->
+  <section id="event-details">
+    <div class="container">
+      <h2>Upcoming Event</h2>
+      <div id="countdown"></div>
+      <div class="details-wrapper">
+        <div class="video-container">
+          <iframe src="https://player.vimeo.com/video/841182996?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1080" height="1920" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="video1"></iframe>
+        </div>
+        <div class="text-content">
+          <h3>Get Lost in Sound, Find Yourself at Sea</h3>
+          <p>Embark on an extraordinary journey and immerse yourself in an unprecedented DJ experience unlike anything Jordan has ever seen before. Picture this: a stunning seascape, illuminated by the golden hues of the sunset, with three magnificent boats adorned with vibrant lights and pulsating with electrifying beats. Brace yourself for an unforgettable evening as we set sail on the sparkling waters, bringing you a DJ party like no other.</p>
+          <p>Prepare to be captivated by the seamless blend of music and nature, as the thumping bass reverberates against the backdrop of the open sea. Let the waves become your dance partner as you lose yourself in the euphoria of the moment, surrounded by the like-minded souls who share your passion for music and the ocean.</p>
+          <p>This one-of-a-kind event is your chance to be part of history, as we pioneer a new era of DJ parties on the mesmerizing waters of Jordan. Join us for an unforgettable voyage, where music, nature, and the spirit of adventure merge into an intoxicating blend of bliss. Don't miss your opportunity to revel in the magic of the sea, dance under the stars, and create memories that will last a lifetime. Get ready to embark on a DJ adventure like no other, where the sea becomes our dancefloor and the night becomes our playground.</p>
+          <h3>Summer starts from here...</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- JavaScript for countdown -->
+  <script>
+    // Set the date and time of the upcoming event
+    var eventDate = new Date("2023-07-24T12:00:00Z");
+
+    // Update the countdown every second
+    setInterval(function() {
+      // Get the current date and time
+      var currentDate = new Date();
+
+      // Calculate the remaining time
+      var remainingTime = eventDate - currentDate;
+
+      // Calculate the days, hours, minutes, and seconds
+      var days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+      // Display the countdown
+      document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+    }, 1000);
+  </script>
+
+
+
+
+  <!-- Gallary Section -->
+<section id="photo-gallery">
+  <div class="container">
+    <h2>Join us for an unforgettable summer experience!</h2>
+    <p>Get your tickets now!</p>
+    <div class="photo-grid">
+      <div class="photo-item">
+        <img src="images/summer1.jpg" alt="Photo 1">
+      </div>
+      <div class="photo-item">
+        <img src="images/summer2.jpg" alt="Photo 2">
+      </div>
+      <div class="photo-item">
+        <img src="images/summer3.jpg" alt="Photo 3">
+      </div>
+      <div class="photo-item">
+        <img src="images/summer4.jpg" alt="Photo 4">
+      </div>
+    </div>
+    <a href="tickets.html" class="button">Buy Tickets</a>
+  </div>
+</section>
+
+
+  <!-- Contact Details Section -->
+  <section id="contact-details">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>For inquiries and further information, feel free to reach out to us:</p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>info@wavesmaster.com</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+962 79-123-4567</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Amman, Jordan</span>
+        </div>
+      </div>
+      <div class="social-media">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- JavaScript for countdown -->
+  <script src="script.js"></script>
+</body>
+</html>
